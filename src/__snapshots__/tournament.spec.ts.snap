@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tournament Create 2 teams should create correct number of games 1`] = `
+Array [
+  Game {
+    "away": 2,
+    "home": 1,
+    "id": 1,
+    "round": 1,
+    "tournamentId": 1,
+    "type": "win",
+  },
+]
+`;
+
+exports[`Tournament Create More than 2 teams should create correct number of games 1`] = `
+Array [
+  Game {
+    "away": 2,
+    "home": 1,
+    "id": 1,
+    "round": 1,
+    "tournamentId": 1,
+    "type": "win",
+  },
+  Game {
+    "away": 4,
+    "home": 3,
+    "id": 2,
+    "round": 1,
+    "tournamentId": 1,
+    "type": "win",
+  },
+  Game {
+    "awayFrom": 2,
+    "homeFrom": 1,
+    "id": 3,
+    "round": 2,
+    "tournamentId": 1,
+    "type": "win",
+  },
+  Object {
+    "awayFrom": 2,
+    "homeFrom": 1,
+    "id": 4,
+    "round": 2,
+    "tournamentId": 1,
+    "type": "lose",
+  },
+]
+`;
+
+exports[`Tournament Display Complete tournament should display tournament data correctly 1`] = `
+"┌────┬───────┬────────┬────────┬──────────────────────────┬────────────┬────────────┬───────┐
+│ ID │ Round │ Home   │ Away   │ Time                     │ Home Score │ Away Score │ Court │
+├────┼───────┼────────┼────────┼──────────────────────────┼────────────┼────────────┼───────┤
+│ 1  │ 1     │ Team 1 │ Team 2 │ 2021-01-01T00:00:00.000Z │ 2          │ 1          │ 1     │
+├────┼───────┼────────┼────────┼──────────────────────────┼────────────┼────────────┼───────┤
+│ 2  │ 1     │ Team 3 │ Team 4 │ 2021-01-02T00:00:00.000Z │ 3          │ 2          │ 2     │
+├────┼───────┼────────┼────────┼──────────────────────────┼────────────┼────────────┼───────┤
+│ 3  │ 2     │ Team 1 │ Team 3 │ 2021-01-03T00:00:00.000Z │ 1          │ 0          │ 3     │
+├────┼───────┼────────┼────────┼──────────────────────────┼────────────┼────────────┼───────┤
+│ 4  │ 2     │ Team 2 │ Team 4 │ 2021-01-04T00:00:00.000Z │ 2          │ 0          │ 4     │
+└────┴───────┴────────┴────────┴──────────────────────────┴────────────┴────────────┴───────┘"
+`;
+
+exports[`Tournament Display Incomplete tournament should display tournament data correctly 1`] = `
+"┌────┬───────┬──────────────────┬──────────────────┬──────┬────────────┬────────────┬───────┐
+│ ID │ Round │ Home             │ Away             │ Time │ Home Score │ Away Score │ Court │
+├────┼───────┼──────────────────┼──────────────────┼──────┼────────────┼────────────┼───────┤
+│ 1  │ 1     │ Team 1           │ Team 2           │      │            │            │       │
+├────┼───────┼──────────────────┼──────────────────┼──────┼────────────┼────────────┼───────┤
+│ 2  │ 1     │ Team 3           │ Team 4           │      │            │            │       │
+├────┼───────┼──────────────────┼──────────────────┼──────┼────────────┼────────────┼───────┤
+│ 3  │ 2     │ Winner of game 1 │ Winner of game 2 │      │            │            │       │
+├────┼───────┼──────────────────┼──────────────────┼──────┼────────────┼────────────┼───────┤
+│ 4  │ 2     │ Loser of game 1  │ Loser of game 2  │      │            │            │       │
+└────┴───────┴──────────────────┴──────────────────┴──────┴────────────┴────────────┴───────┘"
+`;
